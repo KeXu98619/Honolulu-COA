@@ -1,0 +1,22 @@
+apc_data_dir : 'C:\HERD folder\data\input\apc'
+out_dir : 'C:\HERD folder\data\output'
+route_lookup : 'C:\HERD folder\data\input\misc\LineLookup.csv'
+
+column_aliases : 
+  'STOP_ID' : 'stop_id_apc'
+  'STOP_SEQ_ID' : 'stop_seq_id'
+  'ACT_STOP_TIME' : 'stop_time'
+  'TRIP_DATE' : 'trip_date'
+  'ROUTE' : 'route_id_apc'
+  'PSGR_ON' : 'boardings'
+  'PSGR_OFF' : 'alightings'
+  'DIRECTION' : 'direction'
+  'SCH_TIME' : 'sched_time'
+  'TRIP_ID' : 'trip_id'
+
+column_dtypes : 
+  'stop_id' : int
+  'stop_time' : int
+  'boardings' : int
+  'alightings' : int
+  'route_id' : int

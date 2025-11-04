@@ -1,0 +1,98 @@
+out_dir : 'C:\HERD folder\data\output'
+transfer_time_threshold : 90 # mins
+dist_from_previous_stop : 0.25 # mile
+
+similar_dow :
+  0 : [3, 4] # Monday similar days: {Thursday, Friday}
+  1 : [2]
+  2 : [1]
+  3 : [0, 4]
+  4 : [0, 3]
+  5 : [6]
+  6 : [5]
+
+destination_inference_rounds : 
+
+  1 : 
+    holocard_uid : 'Same' # Possible values : {'Same', 'All'}
+    stop_code : 'Same' # {'Same', <Float> (miles from stop)}
+    hour : 'Same' # {'Same', <Int> (absolute hours from tap time)}
+    dow : 'Same' # {'Same', 'Similar Days', 'Any Day'}
+    timeframe : 30 # {<Int> (absolute days from tap day)}
+
+  2 : 
+    holocard_uid : 'Same'
+    stop_code : 'Same'
+    hour : 3 # * Parameter changed from previous round
+    dow : 'Same'
+    timeframe : 30
+
+  3 : 
+    holocard_uid : 'Same'
+    stop_code : 'Same'
+    hour : 'Same' # *
+    dow : 'Similar Days' # *
+    timeframe : 30
+
+  4 : 
+    holocard_uid : 'Same'
+    stop_code : 'Same'
+    hour : 3 # *
+    dow : 'Similar Days'
+    timeframe : 30
+
+  5 : 
+    holocard_uid : 'Same'
+    stop_code : 'Same'
+    hour : 'Same' # *
+    dow : 'Any Day' # *
+    timeframe : 30
+
+  6 : 
+    holocard_uid : 'Same'
+    stop_code : 'Same'
+    hour : 3 # *
+    dow : 'Any Day'
+    timeframe : 30
+
+  7 : 
+    holocard_uid : 'All' # *
+    stop_code : 'Same'
+    hour : 'Same' # *
+    dow : 'Same' # *
+    timeframe : 30
+
+  8 : 
+    holocard_uid : 'All'
+    stop_code : 'Same'
+    hour : 3 # *
+    dow : 'Same'
+    timeframe : 30
+
+  9 : 
+    holocard_uid : 'All'
+    stop_code : 'Same'
+    hour : 'Same' # *
+    dow : 'Similar Days' # *
+    timeframe : 30
+
+  10 : 
+    holocard_uid : 'All'
+    stop_code : 'Same'
+    hour : 3 # *
+    dow : 'Similar Days'
+    timeframe : 30
+
+  11 : 
+    holocard_uid : 'All'
+    stop_code : 0.5
+    hour : 'Same'
+    dow : 'Same'
+    timeframe : 30
+
+  12 : 
+    holocard_uid : 'All'
+    stop_code : 0.5
+    hour : 3
+    dow : 'Same'
+    timeframe : 30

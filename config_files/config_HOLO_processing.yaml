@@ -1,0 +1,100 @@
+holo_data_dir : 'C:\HERD folder\data\input\holo'
+out_dir : 'C:\HERD folder\data\output'
+
+double_tap_threshold_seconds : 2
+
+column_aliases : 
+  'Ride Transaction ID' : 'transaction_uid'
+  'Source' : 'source_id'
+  'Agency' : 'agency_id'
+  "Device\n\nNumber" : 'device_number'
+  "Vehicle\n\nNumber" : 'vehicle_number'
+  "Route\n\nNumber" : 'route_number_holo'
+  "Stop\n\nNumber" : 'stop_number_holo'
+  'Tap Date' : 'tap_date'
+  'Tap Time' : 'tap_time'
+  'Closeout Date' : 'closeout_date'
+  'Fare Category' : 'fare_category_id'
+  "Media\n\nType" : 'media_type_id'
+  "Ride\n\nAmount" : 'ride_amount'
+  'Card Number' : 'holocard_uid'
+  'Ticket ID' : 'ticket_id'
+  'Product ID' : 'product_id'
+  "Product\n\nName" : 'product_name'
+  "Transaction Type\n\nName" : 'transaction_type_name_id'
+  "Transaction\n\nStatus" : 'transaction_status_id'
+  "Offline\n\nTap" : 'offline_tap_id'
+  'Institution Name' : 'institution_name'
+  'Ride Count' : 'ride_count'
+  'Line Group' : 'line_group_id'
+  'Cost Center' : 'cost_center_id'
+  'Is A Tally?' : 'is_a_tally_id'
+
+column_dtypes : 
+  'transaction_uid' : 'int64'
+  'source_id' : 'int'
+  'agency_id' : 'int'
+  'device_number' : 'int'
+  'vehicle_number' : 'int'
+  'route_number_holo' : 'str'
+  'stop_number_holo' : 'int'
+  'tap_date' : 'str'
+  'tap_time' : 'str'
+  'closeout_date' : 'str'
+  'fare_category_id' : 'int'
+  'media_type_id' : 'int'
+  'ride_amount' : 'float'
+  'holocard_uid' : 'int64'
+  'ticket_id' : 'int'
+  'product_id' : 'int'
+  'product_name' : 'str'
+  'transaction_type_name_id' : 'int'
+  'transaction_status_id' : 'int'
+  'offline_tap_id' : 'int'
+  'institution_name' : 'str'
+  'ride_count' : 'int'
+  'line_group_id' : 'int'
+  'cost_center_id' : 'int'
+  'is_a_tally_id' : 'int'
+
+column_lookup_tables : 
+  'source_id' : 
+    'PROXmobil3' : 1
+    'PROXmobil3 Faregate' : 2
+  'agency_id' : 
+    'TheBus' : 1
+    'TheRail' : 2
+  'fare_category_id' : 
+    ' ' : -1
+    'Adult' : 0
+    'Senior' : 1
+    'Disabled' : 2
+    'Youth' : 3
+    'Paratransit' : 4
+    'Medicare' : 5
+    'Adult Subsidy' : 6
+  "media_type_id" : 
+    'ClosedLoop' : 1
+  "transaction_type_name_id" : 
+    'Use' : 1
+    'Boarding' : 2
+    'Transfer' : 3
+    'InformationalTap' : 4
+  "transaction_status_id" : 
+    'Ok' : 1
+  "offline_tap_id" : 
+    -1 : -1
+    'No' : 1
+    'Yes' : 2
+  'line_group_id' : 
+    ' ' : -1
+    'TheBus(FR)' : 1
+    'Rail' : 3
+  'cost_center_id' : 
+    ' ' : -1
+  'is_a_tally_id' : 
+    'Yes' : 1
+    'No' : 2
+
+na_filling : 
+  'offline_tap_id' : -1

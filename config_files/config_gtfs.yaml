@@ -1,0 +1,5 @@
+out_dir : 'C:\HERD folder\data\output'
+gtfs_path : 'C:\HERD folder\data\input\gtfs'
+
+start_service_day : '2021-08-21'
+end_service_day : '2021-12-01'

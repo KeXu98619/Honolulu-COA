@@ -1,0 +1,19 @@
+data_dir : 'C:\HERD folder\data'
+
+# Time of Day definitions
+tod_def :
+  'Early AM' : [3, 4, 5]
+  'AM Peak' : [6, 7, 8]
+  'Midday' : [9, 10, 11, 12, 13, 14]
+  'PM Peak' : [15, 16, 17, 18]
+  'Late Night' : [19, 20, 21, 22]
+  'Owl' : [23, 0, 1, 2]
+
+# If >80% of a user's transactions are WEEKDAY taps, then we call this user a "Weekday User" (else "All-Week")
+weekday_user_thresh : 0.8
+
+# If >80% of a user's transactions are PEAK taps, then we call this user a "Peak User". (ditto "Off-Peak", else "All-Day User")
+tod_user_thresh : 0.8 
+
+# User Segmentation - Weekly Usage (Linked Trips by Month) bins
+usage_bins : [0, 5, 10, 15, 20, 25, 30, 100000]
